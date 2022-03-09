@@ -1,0 +1,32 @@
+
+#email,#text{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+#email-text {
+    font-weight: 900;
+    font-size: 15px;
+    color:darkred;
+}
+#email-field{
+    /* background-color: rgb(47, 9, 83); */
+    background-color: azure;
+    /* color: aliceblue; */
+    padding: 3px;
+    height: 30px;
+    width: 300px;
+    border: none;
+    border-radius: 20px;
+}
+#submit{
+    /* color: rgb(47, 9, 83); */
+    color: aliceblue;
+    font-size: 16px;
+    height: 34px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(47, 9, 83);
+}

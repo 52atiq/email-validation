@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email Validate</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         #text{
             /* display: none;   */
@@ -13,11 +14,12 @@
 </head>
 <body>
     
-    <div>
-        <input id="email-field" type="text" name="" id="">
-        <button onclick="emailValidate()"> submit </button>
-        <p id="text"></p>
+    <div id="email">
+        <input id="email-field" type="text" name="" placeholder=" type email....">
+        <button onclick="emailValidate()"  id="submit"> submit </button>
+      
     </div>
+    <p id="text"></p>
 
     <script src="app.js"></script>
 </body>

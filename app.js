@@ -1,20 +1,25 @@
 const emailValidate =() =>{
 const emailInput= document.getElementById('email-field');
 const email = emailInput.value
-// emailInput.value=''
-// document.querySelector('#email-field').value = '';
-const text= document.getElementById('text');
-// document.getElementById('text').style.display='block'
+emailInput.value=''
 
-console.log(emailInput)
+const text= document.getElementById('text');
+
+// Error handling 
+if(email== ''){
+  text.innerHTML ='please type your email'
+  console.log('please type your email')
+}
+
+console.log(email)
 
 const pattern = 
-    /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-  ;
-//   const pattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  
+
 
   if(email.match(pattern)){
-      text.innerHTML ='Your Email is valid'
+      text.innerHTML = email + ''+  ' <span id="email-text">is valid Email &#128512 </span>'
     //   document.getElementById("text").style.color = "magenta";
       text.style.color ='green'
     //   document.getElementById('text').style.display.color='green'
@@ -23,8 +28,12 @@ const pattern =
      
      
   }
+  else if(email == ''){
+    text.innerHTML=' <p>Please Type Your Email  &#128529 </p>'
+    text.style.color='#cf03fc';
+  }
   else{
-    text.innerHTML ='Your Email is Not  valid';
+    text.innerHTML = email + ' <span id="email-text">is Not  valid Email &#128520 </span>';
     text.style.color='red';
     console.log('Your Email is Not valid')
   
